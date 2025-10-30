@@ -1,0 +1,19 @@
+{
+  "name": "ignite-law",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss:assets/css --no-source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^5.1.0",
+    "sass": "^1.89.2",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

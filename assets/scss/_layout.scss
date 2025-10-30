@@ -1,0 +1,35 @@
+@import "variables";
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $spacing;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-surface;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.min-70vh {
+    min-height: 70dvh;
+}
+
+.min-80vh {
+    min-height: 80dvh;
+}
+
+.min-90vh {
+    min-height: 90dvh;
+}
