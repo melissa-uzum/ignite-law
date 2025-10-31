@@ -1,0 +1,280 @@
+@import "variables";
+
+.hero {
+    position: relative;
+    background: url('../img/1.jpg') center/cover no-repeat;
+    color: $color-text-light;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .hero__content {
+        max-width: 800px;
+        padding: 4rem $spacing;
+
+        h1 {
+            color: $color-text-light;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: $color-text-light;
+        }
+    }
+}
+
+.about {
+    background-color: $color-muted;
+    padding: 4rem $spacing;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing;
+    align-items: center;
+
+
+    .about__text {
+        flex: 1 1 50%;
+
+        h2,
+        p {
+            color: $color-text;
+        }
+    }
+
+    .about__image {
+        flex: 1 1 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+.practice-area {
+    background-color: $color-muted;
+    padding: 4rem 0;
+
+    .container {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 $spacing;
+    }
+
+        .practice-area-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem 4rem;
+            text-align: left;
+            margin-bottom: 3rem;
+
+            .practice-block {
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    font-family: $font-stack;
+                    color: $color-text;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: $color-text;
+                    line-height: 1.6;
+                }
+            }
+        }
+        @media (max-width: 900px) {
+            .practice-area-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .practice-area-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+}
+
+
+footer {
+    background-color: $color-accent-alt;
+    color: $color-text;
+    padding: 4rem $spacing;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+
+    p {
+        margin: 0;
+        color: $color-muted;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.split-section {
+    padding: 4rem $spacing;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+
+    &__image {
+        flex: 1 1 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &__text {
+        flex: 1 1 50%;
+
+        h2,
+        p {
+            color: $color-text;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+
+    &.alt {
+        .split-section__image {
+            order: 2;
+        }
+
+        .split-section__text {
+            order: 1;
+        }
+    }
+
+    &.bg-dark {
+        background-color: $color-surface;
+
+        .split-section__text h2,
+        .split-section__text p {
+            color: $color-dark;
+        }
+    }
+
+    &.bg-light {
+        background-color: $color-muted;
+
+        .split-section__text h2,
+        .split-section__text p {
+            color: $color-text
+        }
+
+        .split-section__image img {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn {
+            background-color: $color-dark;
+            color: $color-text;
+
+            &:hover {
+                background-color: #08081e;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .split-section .container,
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .split-section__image img,
+    .about__image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.philosophy {
+    background-color: $color-accent-alt;
+    color: $color-muted;
+    padding: 4rem $spacing;
+
+    h2 {
+        color: $color-dark;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+.bg-muted {
+    background-color: $color-second;
+}
+
+.split-section {
+    &.bg-muted {
+        background-color: $color-second;
+
+        .split-section__text {
+
+            h2,
+            p {
+                color: $color-text;
+            }
+        }
+
+        .split-section__image img {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .btn {
+            background-color: $color-accent;
+            color: $color-dark;
+
+            &:hover {
+                background-color: darken($color-accent, 8%);
+            }
+        }
+    }
+}

@@ -7,15 +7,15 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Security-Policy" content="
-          default-src 'self';
-          base-uri 'self';
-          img-src 'self' data:;
-          style-src 'self' 'unsafe-inline';
-          script-src 'self' blob:;
-          connect-src 'self' ws:;
-          object-src 'none';
-          form-action 'self' mailto:;
-        ">
+        default-src 'self';
+        base-uri 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline';
+        script-src 'self' blob:;
+        connect-src 'self' https://formspree.io;
+        object-src 'none';
+        form-action 'self' https://formspree.io;
+    ">
     <title>Ignite Law AB</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -59,7 +59,6 @@
 </main>
     <div id="footer-placeholder"></div>
     <script defer src="assets/js/include.js"></script>
-    <script defer src="assets/js/nav.js"></script>
 </body>
 
 </html>

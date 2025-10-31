@@ -1,35 +1,52 @@
 @import "variables";
 
-.container {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 $spacing;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html,
 body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
     height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
     background-color: $color-surface;
 }
 
-main {
-    flex: 1 0 auto;
-}
-.min-70vh {
-    min-height: 70dvh;
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.min-80vh {
-    min-height: 80dvh;
+.container {
+    max-width: $max-width;
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, $spacing);
 }
 
-.min-90vh {
-    min-height: 90dvh;
+.main-header .main-nav ul {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .main-header .main-nav {
+        width: 100%;
+    }
+}
+
+.full-bleed {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
 }

@@ -7,14 +7,14 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      base-uri 'self';
-      img-src 'self' data:;
-      style-src 'self' 'unsafe-inline';
-      script-src 'self' blob:;
-      connect-src 'self' ws:;
-      object-src 'none';
-      form-action 'self' mailto:;
+        default-src 'self';
+        base-uri 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline';
+        script-src 'self' blob:;
+        connect-src 'self' https://formspree.io;
+        object-src 'none';
+        form-action 'self' https://formspree.io;
     ">
     <title>Ignite Law AB</title>
     <link rel="stylesheet" href="assets/css/main.css">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="expertise-block">
                         <h3>Arbetsrätt</h3>
-                        <p>Anställning, omorganisation, uppsägningar, förmåner och policyramverk.</p>
+                        <p>Anställning, omorganisation, uppsägningar och förmåner.</p>
                     </div>
                     <div class="expertise-block">
                         <h3>Fastighetsrätt</h3>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="expertise-block">
                         <h3>Compliance</h3>
-                        <p>Intern kontroll, regelefterlevnad, riskhantering och policyutveckling.</p>
+                        <p>Intern kontroll, regelefterlevnad, riskhantering och policyutveckling till er.</p>
                     </div>
                     <div class="expertise-block">
                         <h3>Dataskydd & GDPR</h3>
@@ -62,7 +62,6 @@
 
     <div id="footer-placeholder"></div>
     <script defer src="assets/js/include.js"></script>
-    <script defer src="assets/js/nav.js"></script>
 </body>
 
 </html>

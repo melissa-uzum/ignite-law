@@ -15,16 +15,19 @@
     slot.innerHTML = html;
     if (typeof after === 'function') after(slot);
   }
+function initNav(root) {
+  const toggleBtn = root.querySelector('.nav-toggle');
+  const nav = root.querySelector('.main-nav');
+  if (!toggleBtn || !nav) return;
 
-  function initNav(root) {
-    const toggleBtn = root.querySelector('.nav-toggle');
-    const nav = root.querySelector('.main-nav');
-    if (toggleBtn && nav) {
-      toggleBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    }
-  }
+  toggleBtn.setAttribute('aria-expanded', 'false');
+
+  toggleBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('active');
+    toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
+
 
   document.addEventListener('DOMContentLoaded', async () => {
     await inject('#header-placeholder', headerURL, initNav);

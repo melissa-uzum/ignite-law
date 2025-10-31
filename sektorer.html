@@ -7,66 +7,61 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Security-Policy" content="
-          default-src 'self';
-          base-uri 'self';
-          img-src 'self' data:;
-          style-src 'self' 'unsafe-inline';
-          script-src 'self' blob:;
-          connect-src 'self' ws:;
-          object-src 'none';
-          form-action 'self' mailto:;
-        ">
+        default-src 'self';
+        base-uri 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline';
+        script-src 'self' blob:;
+        connect-src 'self' https://formspree.io;
+        object-src 'none';
+        form-action 'self' https://formspree.io;
+    ">
     <title>Ignite Law AB</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
     <div id="header-placeholder"></div>
-<main id="main">
 
+    <main id="main" class="min-80vh">
+        <section class="expertise-area">
+            <div class="container">
+                <div class="expertise-area-grid">
+                    <div class="expertise-block">
+                        <h3>Tech & SaaS</h3>
+                        <p>Licenser, dataskydd, molnavtal, open source och plattformsstrategi.</p>
+                    </div>
+                    <div class="practice-block">
+                        <h3>Finans & Fintech</h3>
+                        <p>Regulatoriska frågor, KYC/AML, PSD2, avtal och compliance.</p>
+                    </div>
+                    <div class="practice-block">
+                        <h3>Fastigheter & Bygg</h3>
+                        <p>Hyresjuridik, entreprenad, exploatering och transaktioner.</p>
+                    </div>
+                    <div class="practice-block">
+                        <h3>Energi & Hållbarhet</h3>
+                        <p>Grön finansiering, regulatoriska krav och leveransavtal.</p>
+                    </div>
+                    <div class="practice-block">
+                        <h3>Offentlig sektor</h3>
+                        <p>Upphandling, sekretess, informationshantering och avtal.</p>
+                    </div>
+                    <div class="practice-block">
+                        <h3>Startups & Scaleups</h3>
+                        <p>Bolagsstruktur, incitamentsprogram, investeringsrundor och exits.</p>
+                    </div>
+                </div>
 
-    <section class="expertise-area">
-        <div class="container">
-            <div class="expertise-area-grid">
-                <div class="expertise-block">
-                    <h3>Tech & SaaS</h3>
-                    <p>Licenser, dataskydd, molnavtal, open source och plattformsstrategi.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Finans & Fintech</h3>
-                    <p>Regulatoriska frågor, KYC/AML, PSD2, avtal och compliance.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Fastigheter & Bygg</h3>
-                    <p>Hyresjuridik, entreprenad, exploatering och transaktioner.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Energi & Hållbarhet</h3>
-                    <p>Grön finansiering, regulatoriska krav och leveransavtal.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Hälsa & Life Science</h3>
-                    <p>Integritet, kliniska avtal, informationssäkerhet och standarder.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Offentlig sektor</h3>
-                    <p>Upphandling, sekretess, informationshantering och avtal.</p>
-                </div>
-                <div class="practice-block">
-                    <h3>Startups & Scaleups</h3>
-                    <p>Bolagsstruktur, incitamentsprogram, investeringsrundor och exits.</p>
+                <div class="cta-row">
+                    <a class="btn-slim" href="kontakt.html">Prata med en jurist</a>
                 </div>
             </div>
-
-            <div class="cta-row">
-                <a class="btn-slim" href="kontakt.html">Boka ett intro-samtal</a>
-            </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
     <script defer src="assets/js/include.js"></script>
-    <script defer src="assets/js/nav.js"></script></body>
+</body>
 
 </html>

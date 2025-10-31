@@ -7,14 +7,14 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Security-Policy" content="
-          default-src 'self';
-          base-uri 'self';
-          img-src 'self' data:;
-          style-src 'self' 'unsafe-inline';
-          script-src 'self' blob:;
-          connect-src 'self' ws:;
-          object-src 'none';
-          form-action 'self' mailto:;
+      default-src 'self';
+      base-uri 'self';
+      img-src 'self' data:;
+      style-src 'self' 'unsafe-inline';
+      script-src 'self' blob:;
+      connect-src 'self' https://formspree.io;
+      object-src 'none';
+      form-action 'self' https://formspree.io;
     ">
     <title>Ignite Law AB</title>
     <link rel="stylesheet" href="assets/css/main.css">
@@ -28,35 +28,46 @@
             <div class="container">
                 <section class="contact-form-inline">
                     <h3>Vill du veta mer?</h3>
-                    <form action="mailto:melissauzum@icloud.com" method="POST" enctype="text/plain">
+                    <form id="contactForm" action="https://formspree.io/f/xldopvja" method="POST" accept-charset="UTF-8" novalidate>
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                            style="position:absolute;left:-9999px;opacity:0">
+
                         <div class="form-row">
-                            <input type="text" name="name" placeholder="Namn" required />
-                            <input type="text" name="company" placeholder="Företagsnamn / Organisationsnummer"
-                                required />
+                            <input type="text" name="name" placeholder="Namn" required>
+                            <input type="text" name="company" placeholder="Företagsnamn / Organisationsnummer" required>
                         </div>
+
                         <div class="form-row">
-                            <input type="tel" name="phone" placeholder="Telefonnummer" required />
-                            <input type="email" name="email" placeholder="E-postadress" required />
+                            <input type="tel" name="phone" placeholder="Telefonnummer" required>
+                            <input type="email" name="email" placeholder="E-postadress" required>
                         </div>
+
                         <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea>
-                        <button type="submit" class="btn-slim">Skicka meddelande</button>
+
+                        <div class="cta-row">
+                            <button type="submit" class="btn-slim btn-slim--lg btn-slim--wide">Skicka meddelande</button>
+                        </div>
                     </form>
-                    <div class="contact-details">
-                        <div class="contact-item">
+                    <div class="contact-cards">
+                        <div class="contact-card">
                             <h4>Mobil</h4>
                             <p><a href="tel:+46700000000" aria-label="Ring Ignite Law">070-000 0000</a></p>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-card">
                             <h4>E-post</h4>
-                            <p><a href="mailto:ignitelaw@mail.com" aria-label="E-post till Ignite Law">ignitelaw@mail.com</a></p>
+                            <p><a href="mailto:melissauzum@icloud.com" aria-label="E-post till Ignite Law">melissauzum@icloud.com</a></p>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-card">
                             <h4>Adress</h4>
-                            <p>Gerda Bergstrands Väg 2<br>163 49 Spånga</p>
+                            <address>
+                                Gerda Bergstrands Väg 2<br />
+                                163 49 Spånga
+                            </address>
                         </div>
                     </div>
+
                 </section>
             </div>
         </section>
@@ -64,7 +75,6 @@
 
     <div id="footer-placeholder"></div>
     <script defer src="assets/js/include.js"></script>
-    <script defer src="assets/js/nav.js"></script>
 </body>
 
 </html>

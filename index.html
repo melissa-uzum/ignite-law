@@ -7,16 +7,15 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      base-uri 'self';
-      img-src 'self' data:;
-      style-src 'self' 'unsafe-inline';
-      script-src 'self' blob:;
-      connect-src 'self' ws:;
-      object-src 'none';
-      form-action 'self' mailto:;
+        default-src 'self';
+        base-uri 'self';
+        img-src 'self' data:;
+        style-src 'self' 'unsafe-inline';
+        script-src 'self' blob:;
+        connect-src 'self' https://formspree.io;
+        object-src 'none';
+        form-action 'self' https://formspree.io;
     ">
-
     <title>Ignite Law AB</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -29,6 +28,9 @@
             <div class="hero__content">
                 <h1>Sveriges mest engagerade juristbyrå</h1>
                 <p>Rättvisa. Engagemang. Resultat.</p>
+                <div class="cta-row-1">
+                    <a class="btn-slim-1" href="kontakt.html">Prata med en jurist</a>
+                </div>
             </div>
         </div>
     </section>
@@ -97,18 +99,27 @@
         <div class="container">
             <section class="contact-form-inline">
                 <h3>Vill du veta mer?</h3>
-                <form action="mailto:melissauzum@icloud.com" method="POST" enctype="text/plain">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Namn" required>
-                        <input type="text" name="company" placeholder="Företagsnamn / Organisationsnummer" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" name="phone" placeholder="Telefonnummer" required>
-                        <input type="email" name="email" placeholder="E-postadress" required>
-                    </div>
-                    <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea>
-                    <button type="submit" class="btn-slim">Skicka meddelande</button>
-                </form>
+                    <form id="contactForm" action="https://formspree.io/f/xldopvja" method="POST" accept-charset="UTF-8" novalidate>
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                            style="position:absolute;left:-9999px;opacity:0">
+
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Namn" required>
+                            <input type="text" name="company" placeholder="Företagsnamn / Organisationsnummer" required>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="tel" name="phone" placeholder="Telefonnummer" required>
+                            <input type="email" name="email" placeholder="E-postadress" required>
+                        </div>
+
+                        <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea>
+
+                        <div class="cta-row">
+                            <button type="submit" class="btn-slim btn-slim--lg btn-slim--wide">Skicka meddelande</button>
+                        </div>
+                    </form>
+
             </section>
         </div>
     </section>
