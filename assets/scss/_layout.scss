@@ -9,7 +9,7 @@
 html,
 body {
     width: 100%;
-    max-width: 100%;
+    max-width: max;
     overflow-x: hidden;
     overscroll-behavior-x: none;
     height: 100%;
@@ -32,9 +32,6 @@ iframe {
     padding-inline: clamp(1rem, 4vw, $spacing);
 }
 
-.main-header .main-nav ul {
-    margin-right: 0;
-}
 
 @media (max-width: 768px) {
     .main-header .main-nav {

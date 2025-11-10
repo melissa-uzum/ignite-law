@@ -4,6 +4,11 @@
     background-color: $color-surface;
     padding: clamp(2.5rem, 4vw, 4rem) 0;
 
+    h2{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
     .container {
         max-width: $max-width;
         margin-inline: auto;
@@ -13,27 +18,20 @@
     .expertise-area-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: clamp(1.25rem, 2.5vw, 2rem);
+        gap: clamp(2rem, 3.5vw, 3rem);
         align-items: start;
-        margin-bottom: clamp(1.5rem, 3vw, 2rem);
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+        margin-top: 5%;
         text-align: left;
     }
 
     .expertise-block,
     .practice-block {
         position: relative;
-        padding: 1.25rem 1.25rem 1rem;
-        border-radius: 14px;
-        background: mix(#fff, $color-surface, 88%);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        transition: transform 150ms ease, box-shadow 150ms ease;
-
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-            border-color: rgba(0, 0, 0, 0.12);
-        }
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
 
         h3 {
             margin: 0 0 0.6rem;
@@ -47,10 +45,10 @@
             &::after {
                 content: "";
                 display: block;
-                width: 72px;
-                height: 3px;
+                width: 56px;
+                height: 2px;
                 margin-top: 0.35rem;
-                background: #c8a46d;
+                background: $color-accent;
                 border-radius: 2px;
             }
         }
@@ -58,21 +56,22 @@
         p {
             margin: 0;
             font-size: 1rem;
-            line-height: 1.55;
+            line-height: 1.7;
             color: $color-text;
-            max-width: 48ch;
+            max-width: 62ch;
         }
     }
 
     @media (max-width: 900px) {
         .expertise-area-grid {
-            gap: 1.25rem 1.25rem;
+            gap: clamp(1.5rem, 3vw, 2.25rem);
         }
     }
 
     @media (max-width: 600px) {
         .expertise-area-grid {
             grid-template-columns: 1fr;
+            gap: clamp(1.25rem, 3vw, 2rem);
         }
     }
 }
@@ -94,4 +93,9 @@ main {
 
 .min-80vh {
     min-height: 80dvh;
+}
+
+.h2-main {
+    text-align: center;
+    margin-bottom: 2%;
 }
