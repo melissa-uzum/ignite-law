@@ -14,6 +14,6 @@
     "@symfony/webpack-encore": "^5.1.0",
     "sass": "^1.89.2",
     "webpack": "^5.100.2",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^5.1.4"
   }
 }
