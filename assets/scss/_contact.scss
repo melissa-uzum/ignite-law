@@ -1,5 +1,19 @@
 @import "variables";
 
+.visually-hidden,
+.honeypot {
+    position: absolute !important;
+    left: -100vw !important;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .contact-section {
     background-color: $color-surface;
     padding: 4rem 0;
@@ -185,3 +199,4 @@
         margin-bottom: 1.25rem;
     }
 }
+
