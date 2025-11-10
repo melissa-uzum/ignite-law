@@ -394,6 +394,26 @@ iframe {
   text-align: center;
 }
 
+footer {
+  background-color: #e6d5b8;
+  color: #1b1c21;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+footer p {
+  margin: 0;
+  color: #cfd2d4;
+}
+footer a {
+  color: #1b1c21;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
 .hero {
   position: relative;
   background: url("../img/1.jpg") center/cover no-repeat;
@@ -446,65 +466,6 @@ iframe {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.practice-area {
-  background-color: #cfd2d4;
-  padding: 4rem 0;
-}
-.practice-area .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.practice-area .practice-area-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem 4rem;
-  text-align: left;
-  margin-bottom: 3rem;
-}
-.practice-area .practice-area-grid .practice-block h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: "Georgia", serif;
-  color: #1b1c21;
-  margin-bottom: 0.5rem;
-}
-.practice-area .practice-area-grid .practice-block p {
-  font-size: 1rem;
-  color: #1b1c21;
-  line-height: 1.6;
-}
-@media (max-width: 900px) {
-  .practice-area .practice-area-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .practice-area .practice-area-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-footer {
-  background-color: #e6d5b8;
-  color: #1b1c21;
-  padding: 4rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-}
-footer p {
-  margin: 0;
-  color: #cfd2d4;
-}
-footer a {
-  color: #1b1c21;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
 }
 
 .split-section {
@@ -1002,11 +963,6 @@ main {
   min-height: 80dvh;
 }
 
-.h2-main {
-  text-align: center;
-  margin-bottom: 2%;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .btn-slim {
     transition: none;
@@ -1071,6 +1027,72 @@ main {
 }
 .split-section.bg-muted .btn:hover {
   background-color: rgb(188.8358208955, 145.528358209, 79.3641791045);
+}
+
+.practice-area .practice-area-grid .practice-block p {
+  margin-top: 0;
+}
+
+.practice-area {
+  background-color: #cfd2d4;
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+}
+.practice-area .container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+.practice-area .practice-area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: clamp(3rem, 4vw, 4rem);
+  row-gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+  text-align: left;
+}
+.practice-area .grid-header {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+.practice-area .h2-main {
+  margin: 0;
+  text-align: center;
+}
+.practice-area .intro {
+  margin: 0;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: center;
+}
+.practice-area .practice-block {
+  margin-top: 0;
+}
+.practice-area .practice-block h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Georgia", serif;
+  color: #1b1c21;
+}
+.practice-area .practice-block h3::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 0.35rem;
+  background: #c8a46d;
+  border-radius: 2px;
+}
+.practice-area .practice-block p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #1b1c21;
+  max-width: 62ch;
 }
 
 /*# sourceMappingURL=main.css.map */

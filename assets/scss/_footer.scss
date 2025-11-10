@@ -128,3 +128,26 @@
     padding-top: 0.8rem;
     text-align: center;
 }
+
+footer {
+    background-color: $color-accent-alt;
+    color: $color-text;
+    padding: 4rem $spacing;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+
+    p {
+        margin: 0;
+        color: $color-muted;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

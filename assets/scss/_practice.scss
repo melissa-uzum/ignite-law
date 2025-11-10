@@ -1,0 +1,77 @@
+@import "variables";
+
+.practice-area .practice-area-grid .practice-block p {
+    margin-top: 0;
+}
+
+.practice-area {
+    background-color: $color-muted;
+    padding: clamp(2.5rem, 4vw, 4rem) 0;
+
+    .container {
+        max-width: $max-width;
+        margin-inline: auto;
+        padding-inline: $spacing;
+    }
+
+    .practice-area-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        column-gap: clamp(3rem, 4vw, 4rem);
+        row-gap: clamp(2rem, 4vw, 3.5rem);
+        align-items: start;
+        text-align: left;
+    }
+
+    .grid-header {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.5rem;
+    }
+
+    .h2-main {
+        margin: 0;
+        text-align: center;
+    }
+
+    .intro {
+        margin: 0;
+        line-height: 1.7;
+        max-width: $max-width;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .practice-block {
+        margin-top: 0;
+
+        h3 {
+            margin: 0 0 0.6rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: $font-stack;
+            color: $color-text;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 56px;
+                height: 2px;
+                margin-top: 0.35rem;
+                background: $color-accent;
+                border-radius: 2px;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: $color-text;
+            max-width: 62ch;
+        }
+    }
+}
+
