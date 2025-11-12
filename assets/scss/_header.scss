@@ -68,7 +68,7 @@
             li {
                 opacity: 0;
                 transform: translateY(-10px);
-                animation: slideIn 400ms cubic-bezier(.22, 1, .36, 1) forwards;
+                animation: slideIn 200ms cubic-bezier(.22, 1, .36, 1) forwards;
 
                 &:nth-child(1) {
                     animation-delay: .12s;
